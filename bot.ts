@@ -1,4 +1,3 @@
-import "https://deno.land/std@0.170.0/dotenv/load.ts";
 import { Bot } from "https://deno.land/x/grammy@v1.12.5/mod.ts";
 import { search } from "./results.ts";
 
@@ -24,6 +23,20 @@ bot.inlineQuery(/[a-z0-9 ]+/i, async (ctx) => {
     thumb_url: result.image,
   })));
 });
+
+bot.command(
+  "/help",
+  (ctx) => ctx.reply("Use /start for instructions and /repo to check my code."),
+);
+
+bot.command(
+  "/repo",
+  (ctx) =>
+    ctx.reply(
+      "You can read my code on [GitHub](https://github.com/roziscoding/knowyourmeme-telegram-bot)",
+      { parse_mode: "Markdown" },
+    ),
+);
 
 bot.on(
   "message",

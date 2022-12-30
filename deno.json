@@ -2,6 +2,6 @@
   "tasks": {
     "webhook": "deno run -A webhook.ts",
     "polling": "deno run -A polling.ts",
-    "set-webhook": "deno run -A set-webhook"
+    "set-webhook": "deno run -A set-webhook.ts"
   }
 }
