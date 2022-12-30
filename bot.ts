@@ -25,12 +25,12 @@ bot.inlineQuery(/[a-z0-9 ]+/i, async (ctx) => {
 });
 
 bot.command(
-  "/help",
+  "help",
   (ctx) => ctx.reply("Use /start for instructions and /repo to check my code."),
 );
 
 bot.command(
-  "/repo",
+  "repo",
   (ctx) =>
     ctx.reply(
       "You can read my code on [GitHub](https://github.com/roziscoding/knowyourmeme-telegram-bot)",
