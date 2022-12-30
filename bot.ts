@@ -1,4 +1,4 @@
-import { Bot } from "https://deno.land/x/grammy@v1.12.5/mod.ts";
+import { Bot } from "https://deno.land/x/grammy@v1.13.0/mod.ts";
 import { search } from "./results.ts";
 
 export const bot = new Bot(Deno.env.get("TELEGRAM_TOKEN") ?? "");
